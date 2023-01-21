@@ -1,0 +1,24 @@
+clear all;
+close all;
+clc;
+a=[1 -1.143 0.4128];
+b=[0.0675 0.1349 0.675];
+x=zeros(1,50);
+yi=[1,2];
+z=filtic(b,a,yi);
+y=filter(b,a,x,z);
+subplot(4,1,1);
+stem(y);
+x1=ones(1,50);
+y1=filter(b,a,x1);
+subplot(4,1,2);
+stem(y1);
+n=1:100;
+x2=cos(2*pi*n);
+y2=filter(b,a,x2);
+subplot(4,1,3);
+stem(y2);
+[h,t]=impz(b,a,100);
+subplot(4,1,4);
+stem([h,t]);
+
