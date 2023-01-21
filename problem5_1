@@ -1,0 +1,48 @@
+clear all;
+close all;
+clc;
+A=1;
+a=5;
+t=0:0.001:1;
+x1t=A*exp(a*t);
+subplot(2,2,1);
+plot(t,x1t);
+title('Rising Exponential');
+xlabel('Value of t');
+ylabel('Value of x1t');
+axis([0 0.5 0 10])
+grid on;
+
+subplot(2,2,2);
+plot(t,x1t);
+stem(t,x1t,'k');
+title('Rising Exponential');
+xlabel('Value of t');
+ylabel('Value of x1t');
+grid on;
+
+
+B=5;
+b=6;
+t=0:0.001:1;
+x2t=B*exp(-b*t);
+subplot(2,2,3);
+plot(t,x2t);
+title('Decaying Exponential');
+xlabel('Value of t');
+ylabel('Value of x1t');
+axis([0 0.5 0 6])
+grid on;
+
+subplot(2,2,4);
+plot(t,x2t);
+stem(t,x2t,'k');
+title('Decaying Exponential');
+xlabel('Value of t');
+ylabel('Value of x2t');
+grid on;
+
+
+
+
+
