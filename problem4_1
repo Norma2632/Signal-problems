@@ -1,0 +1,24 @@
+clc;
+close all;
+clear all;
+
+
+A=1;
+w0=10*pi;
+rho=0.5;
+t=0:0.001:1;
+sq=A*square(w0*t+rho);
+subplot(4,2,1);
+plot(t,sq);
+axis([0 1 -1.1 1.1]);
+
+fs=1000;
+f=2;
+t=0:1/fs:1-1/fs;
+sqr=square(2*pi*f*t);
+subplot(4,2,2);
+plot(t,sqr);
+grid on;
+axis tight;
+
+
