@@ -1,0 +1,21 @@
+clc;
+clear all;
+close all;
+disp('Unit Impulse signal generation');
+N3=input('Enter number of samples: ');
+n3=0:1:N3;
+a=input('Max ampplitude:')
+x3=a*n3/N3;
+subplot(2,1,1);
+plot(n3,x3,'k');
+xlabel('time');
+ylabel('r(t)');
+title('Continuous ramp impulse signal')
+grid on;
+
+subplot(2,1,2);
+stem(n3,x3,'k');
+xlabel('time');
+ylabel('r[n]');
+title('Continuous ramp impulse signal')
+grid on;
