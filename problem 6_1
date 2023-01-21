@@ -1,0 +1,22 @@
+clc;
+clear all;
+close all;
+disp('Unit Impulse signal generation');
+N0=input('Enter number of samples: ');
+n0=-N0:1:N0;
+x0=[zeros(1,N0),1,zeros(1,N0)];
+subplot(2,1,1);
+plot(n0,x0,'k');
+xlabel('t');
+ylabel('u(t)');
+title('Continuous Unit impulse signal')
+grid on;
+axis([-15 15 0 1.5])
+
+subplot(2,1,2);
+stem(n0,x0,'k');
+xlabel('t');
+ylabel('u([n]');
+title('Discrete Unit impulse signal')
+grid on;
+axis([-15 15 0 1.5])
