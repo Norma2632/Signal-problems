@@ -1,0 +1,22 @@
+clear all;
+close all;
+clc;
+A=60;
+w0=20*pi;
+phi=0;
+a=6;
+t=0:0.001:1;
+expsin=A*sin(w0*t+phi).*exp(-a*t);
+subplot(2,1,1);
+plot(t,expsin,'k');
+xlabel('Value of t');
+ylabel('Value of expsin');
+title('damp exponential');
+grid;
+
+subplot(2,1,2);
+stem(t,expsin,'k');
+xlabel('Value of t');
+ylabel('Value of expsin');
+title('damp exponential');
+grid;
